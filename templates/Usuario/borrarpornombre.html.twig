@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table border="1" width="100%">
+		<tr>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Apellido</th>
+		</tr>
+	{% for usuario in usuarios %}
+		<tr>
+			<td>{{ usuario.id }}</td>
+			<td>{{ usuario.nombre }}</td>
+			<td>{{ usuario.apellido }}</td>
+		</tr>
+	{% else %}
+		<tr>
+			<td colspan="3">No existen resultados</td>
+		</tr>
+	{% endfor %}
+	</table>
+
+</body>
+</html>
